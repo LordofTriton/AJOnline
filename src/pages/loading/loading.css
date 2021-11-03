@@ -1,0 +1,17 @@
+.loader {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--heat-wave);
+    border-radius: 50%;
+    animation: loader 1s infinite;
+}
+
+@keyframes loader {
+    0% {width: 10px; height: 10px; border: 30px solid #ff9e00ff;}
+    50% {width: 20px; height: 20px; border: 10px solid #ff9e00ff;}
+    100% {width: 10px; height: 10px; border: 30px solid #ff9e00ff;}
+}

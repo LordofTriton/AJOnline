@@ -1,0 +1,75 @@
+.sideNavContainer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../assets/images/bckg3.jpg);
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: all 0.5s;
+    box-shadow: 4px 0px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.sideNavContainerCancel {
+    color: white;
+    margin: 30px 65px 30px 30px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.sideNavContainerCancel:hover {
+    color: var(--orange-peel);
+}
+
+.sideNavButton {
+    width: 80%;
+    height: fit-content;
+    margin: 0px 10% 30px 10%;
+    border-width: 0px 0px 0px 7px;
+    border-style: solid;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.sideNavButton:hover h3 {
+    opacity: 1;
+}
+
+.sideNavButton h3 {
+    color: white;
+    margin: 20px 20px 20px 20px;
+    text-align: right;
+    font-size: 25px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.mediaIcons {
+    width: 20px;
+    height: 20px;
+    margin: 25px 15px 25px 15px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.mediaIcons:hover {
+    transform: scale(1.5,1.5);
+}
+
+.sideNavRights {
+    float: right;
+    color: white;
+    font-weight: 400;
+    margin: 0px 10% 0px 0px;
+    opacity: 0.8;
+    font-size: medium;
+}
+
+
+@media screen and (min-width: 1125px) {
+    .sideNavContainer {
+        width: 500px;
+    }
+}

@@ -1,0 +1,59 @@
+.newsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 150px 30px 100px 30px;
+    box-sizing: border-box;
+}
+
+.blogEntry {
+    width: 80%;
+    height: fit-content;
+    margin: 20px 0px 0px 5%;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.blogEntry:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.blogEntryTitle {
+    color: white;
+    font-size: 30px;
+}
+
+.blogEntryInfo {
+    color: white;
+    font-weight: 300;
+}
+
+.blogEntryInfo span {
+    margin: 0px 30px;
+}
+
+.blogEntryContent {
+    color: white;
+    font-weight: 200;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.blogEntryDivider {
+    width: 80%;
+    margin: 20px 0px 0px 5%;
+}
+
+
+@media screen and (min-width: 1125px) {
+    .blogEntry {
+        margin-left: 10%;
+    }
+    .blogEntryTitle {
+        font-size: 40px;
+    }
+    .blogEntryDivider {
+        margin-left: 10%;
+    }
+}

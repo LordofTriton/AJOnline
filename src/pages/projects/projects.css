@@ -1,0 +1,59 @@
+.projectsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 150px 30px 100px 30px;
+    box-sizing: border-box;
+}
+
+.projectEntry {
+    width: 100%;
+    height: fit-content;
+    opacity: 0.5;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.projectEntry:hover {
+    opacity: 1;
+}
+
+.projectName {
+    color: white;
+    font-size: 40px;
+    margin: 20px 0px 0px 20px;
+}
+
+.projectSpec {
+    font-size: 15px;
+    color: white;
+    margin: 0px 0px 20px 20px;
+    font-weight: 200;
+    float: left;
+}
+
+.projectSpec span {
+    margin: 0px 20px;
+}
+
+.projectSpecGit {
+    width: 20px;
+    height: 20px;
+    margin: 0px !important;
+    float: left;
+    transform: scale(1.5, 1.5);
+}
+
+
+@media screen and (min-width: 1125px) {
+    .projectName {
+        font-size: 80px;
+        margin: 20px 0px 0px 200px;
+    }
+    .projectSpec {
+        margin: 0px 0px 20px 200px;
+    }
+    .projectSpec span {
+        margin: 0px 30px;
+    }
+}

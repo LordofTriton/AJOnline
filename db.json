@@ -1,0 +1,174 @@
+{
+  "Messages": [
+    {
+      "id": 1,
+      "Name": "Halo McGee",
+      "Email": "halomcgee@gmail.com",
+      "Subject": "Partnership",
+      "Content": "Hello, my name is Halo and I'm currently a CS student in college. I was wondering if you'd like to work with me on a project.",
+      "Date": "Monday, November 1, 2021."
+    },
+    {
+      "id": 2,
+      "Name": "Halo McGee",
+      "Email": "halomcgee@gmail.com",
+      "Subject": "Partnership",
+      "Content": "Hello, my name is Halo and I'm currently a CS student in college. I was wondering if you'd like to work with me on a project.",
+      "Date": "Monday, November 1, 2021."
+    }
+  ],
+  "Reviews": [
+    {
+      "id": 1,
+      "Name": "Shao Khan",
+      "Email": "littleshao@outlook.com",
+      "Title": "Fantastic Portfolio",
+      "Content": "This is a top-notch online portfolio, you won't find any that much better than this, and it was reportedly made in ONE WEEK! That's amazing!\nIf you're looking for a developer with fast, efficient, and meticulous work, this is your guy.",
+      "Date": "Monday, November 1, 2021."
+    },
+    {
+      "id": 2,
+      "Name": "Tyler Hoechlin",
+      "Email": "littlety@outlook.com",
+      "Title": "",
+      "Content": "Nice Portfolio.",
+      "Date": "Tuesday, November 2, 2021."
+    }
+  ],
+  "BlogPosts": [
+    {
+      "id": 1,
+      "Title": "New Project: Online CV/Resume",
+      "Category": "Project",
+      "Content": "I decided to build myself an online portfolio.\nIt's a really fun project to embark upon, especially if you love coding like I do lol. It will took me roughly one week to build and host this.\nI'll be updating it as time goes on...",
+      "Date": "Tuesday, 26 October, 2021",
+      "Comments": [
+        {
+          "id": 1,
+          "UserName": "LordTriton",
+          "Email": "agboola918@gmail.com",
+          "Content": "Looks really nice. Good work :)",
+          "Date": "Wednesday, 27 October, 2021",
+          "Replies": [
+            {
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@LordTriton Thanks!",
+              "Date": "Wednesday, 27 October, 2021",
+              "id": 1
+            },
+            {
+              "id": 2,
+              "UserName": "LordTriton",
+              "Email": "agboola918@gmail.com",
+              "Content": "@Josh It's cool.",
+              "Date": "Sunday, October 31, 2021."
+            },
+            {
+              "id": 3,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@LordTriton Do you know any tips for someone learning AngularJS?",
+              "Date": "Sunday, October 31, 2021."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "UserName": "BootyShaker9000",
+          "Email": "agboola918@gmail.com",
+          "Content": "Can you help me with mine?",
+          "Date": "Monday, 32 October, 2021",
+          "Replies": []
+        },
+        {
+          "id": 3,
+          "UserName": "Bi-Hanzo",
+          "Email": "agboola918@gmail.com",
+          "Content": "Cool portfolio. Did you use a template?",
+          "Date": "Sunday, October 31, 2021.",
+          "Replies": [
+            {
+              "id": 1,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@Bi-Hanzo I drew inspiration from several templates, yes.",
+              "Date": "Sunday, October 31, 2021."
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "UserName": "snoe",
+          "Email": "agboola918@gmail.com",
+          "Content": "nice",
+          "Date": "Sunday, October 31, 2021.",
+          "Replies": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "Title": "The Study of AngularJS",
+      "Category": "Study",
+      "Content": "I've recently started a tutorial on the AngularJS framework. The learning curve is a bit steeper than that of ReactJS, but nothing I can't manage heh. Wonder what I'll be able to create with this...",
+      "Date": "Saturday, 30 October, 2021",
+      "Comments": [
+        {
+          "id": 1,
+          "UserName": "BootyShaker9000",
+          "Email": "agboola918@gmail.com",
+          "Content": "Good luck...",
+          "Date": "Monday, 32 October, 2021",
+          "Replies": [
+            {
+              "id": 1,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@BootyShaker9000 Thanks!",
+              "Date": "Sunday, October 31, 2021."
+            },
+            {
+              "id": 2,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@BootyShaker9000 You know a bit about AngularJS?",
+              "Date": "Sunday, October 31, 2021."
+            },
+            {
+              "id": 3,
+              "UserName": "BootyShaker9000",
+              "Email": "agboola918@gmail.com",
+              "Content": "@Josh Nah. I've been meaning to look into it, though.",
+              "Date": "Sunday, October 31, 2021."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "UserName": "Josh",
+          "Email": "agboola918@gmail.com",
+          "Content": "Anyone got tips for me?",
+          "Date": "Sunday, October 31, 2021.",
+          "Replies": []
+        },
+        {
+          "id": 3,
+          "UserName": "Yolo",
+          "Email": "agboola918@gmail.com",
+          "Content": "Where can I find the tutorial you're using?",
+          "Date": "Sunday, October 31, 2021.",
+          "Replies": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "Title": "Chatbot Mech and AI",
+      "Category": "Report",
+      "Content": "I've made some upgrades to the Z.E.U.S Project, mainly in the chatbot's ability to learn from dialogue. I also made a few UI fixes regarding responsivity. The major underlying flaw with the bot is it's inability to recognize context in conversation. I intend to research on solutions to this issue ASAP.",
+      "Comments": [],
+      "Date": "Saturday, 31 October, 2021"
+    }
+  ]
+}

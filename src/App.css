@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --eerie-black: #1F1F1F;
+  --platinum: #E5E5E5;
+  --pumpkin: #ff6d00ff;
+  --heat-wave: #ff7900ff;
+  --dark-orange: #ff8500ff;
+  --yellow-orange: #ff9100ff;
+  --orange-peel: #ff9e00ff;
+  --russian-violet: #240046ff;
+  --persian-indigo: #3c096cff;
+  --purple: #5a189aff;
+  --french-violet: #7b2cbfff;
+  --dark-orchid: #9d4eddff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+::-webkit-scrollbar-thumb {
+  background: var(--heat-wave);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--orange-peel);
+}
+
+@font-face {
+  font-family: Kosans;
+  src: url(assets/fonts/KosansDemoRegular-z8G8G.ttf);
+}
+
+@font-face {
+  font-family: Erva;
+  src: url(assets/fonts/ErvaEsraDemoSemibold-Rpwle.ttf);
+}
+
+* {
+  transition: all 0.5s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.dimmer {
+  width: 100%;
+  height: 100%;
+  background-color: #00000090;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.displayContent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+.pageContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/bckg5.jpg);
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  transition: all 0.5s;
+}
+
+.pageContainerTitle {
   color: white;
+  margin: 0px 20px;
+  font-family: Kosans;
 }
 
-.App-link {
-  color: #61dafb;
+.pageContainerTitle span {
+  color: var(--orange-peel);
+  font-family: Kosans;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sampleButton {
+  width: 400px;
+  height: 60px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: var(--orange-peel);
+  cursor: pointer;
+  margin: 50px;
+  display: block;
+}
+
+
+@media screen and (min-width: 1125px) {
+  .pageContainer {
+    background-size: 100% 100%;
+    background-position: unset;
   }
-  to {
-    transform: rotate(360deg);
+  .pageContainerTitle {
+    margin-left: 40px;
   }
 }

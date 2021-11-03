@@ -1,0 +1,118 @@
+.introContainer {
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--eerie-black); */
+    overflow: auto;
+    padding: 160px 30px 100px 30px;
+    box-sizing: border-box;
+    perspective: 1000px;
+}
+
+.introMessage {
+    color: white;
+    font-size: 60px;
+    width: 80%;
+    float: left;
+    margin: 30px 0px 80px 30px;
+}
+
+.introMessage span {
+    color: var(--orange-peel);
+}
+
+.introSubMessage {
+    color: #FFFFFF80;
+    font-size: 15px;
+    width: 80%;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 70px;
+    font-weight: 400;
+}
+
+.introSubSubMessage {
+    color: var(--orange-peel);
+    font-size: 20px;
+    width: 50%;
+    float: left;
+    margin-left: 30px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 90px;
+}
+
+.introImage {
+    height: 100vh;
+    width: 450px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 150px;
+    border-radius: 10px;
+}
+
+.resumeButton {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.resumeButton hr {
+    width: 60px;
+    float: left;
+    transform: translate(0px, 30px);
+    margin-right: 30px;
+}
+
+.resumeButton h3 {
+    color: white;
+    margin: 19px;
+    float: left;
+    font-weight: 200;
+    transition: all 0.5s;
+}
+
+.resumeButton:hover h3 {
+    color: var(--orange-peel);
+}
+
+.resumeButton:hover .downloadButton {
+    border-color: var(--orange-peel);
+}
+
+.resumeButton:hover svg {
+    color: var(--orange-peel);
+}
+
+.downloadButton {
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: left;
+    transition: all 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 1125px) {
+    .introMessage {
+        font-size: 80px;
+        margin: 30px 0px 50px 150px;
+        width: 40%;
+    }
+    .introSubMessage {
+        font-size: 30px;
+        margin-left: 100px;
+        width: 50%;
+    }
+    .resumeButton hr {
+        width: 120px;
+    }
+}

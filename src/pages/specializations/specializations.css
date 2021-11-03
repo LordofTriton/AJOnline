@@ -1,0 +1,68 @@
+.specContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 150px 30px 100px 30px;
+    box-sizing: border-box;
+}
+
+.specBoxContainer {
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+    height: fit-content;
+}
+
+.specBox {
+    width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    background-color: transparent;
+    float: left;
+    transition: all 0.5s;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.specBox:hover {
+    transform: scale(1.1,1.1);
+    background-color: #FFFFFF10;
+}
+
+.specBox:hover .specBoxInfo {
+    color: white;
+}
+
+.specBox:hover .specBoxTitle {
+    color: var(--orange-peel);
+}
+
+.specBoxImg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.specBoxTitle {
+    color: white;
+    margin: 20px;
+    font-family: Kosans;
+}
+
+.specBoxInfo {
+    color: #FFFFFF50;
+    margin: 20px;
+    font-weight: 200;
+}
+
+
+@media screen and (min-width: 1125px) {
+    .specBoxContainer {
+        width: 80%;
+        margin: 50px 10% 0px 10%;
+    }
+    .specBox {
+        width: 33.33%;
+    }
+}

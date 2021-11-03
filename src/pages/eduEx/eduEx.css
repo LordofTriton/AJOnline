@@ -1,0 +1,67 @@
+.eduexpContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 150px 30px 100px 30px;
+    box-sizing: border-box;
+}
+
+.eduContainer {
+    width: 35%;
+    height: fit-content;
+    min-height: 700px;
+    margin: 30px 5% 0px 10%;
+    background-color: #ff6d0090;
+    float: left;
+    transition: all 0.5s;
+    border-radius: 5px;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+}
+
+.expContainer {
+    width: 35%;
+    height: fit-content;
+    min-height: 700px;
+    margin: 100px 10% 0px 5%;
+    background-color: #ff6d0090;
+    float: left;
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.eduContainer:hover {
+    background-color: #ff6d00;
+}
+
+.expContainer:hover {
+    background-color: #ff6d00;
+}
+
+.eduContainerTitle {
+    color: white;
+    margin-bottom: 0px;
+    font-size: 40px;
+    transform: translate(0px, -50px);
+}
+
+.expContainerTitle {
+    color: white;
+    margin-bottom: 0px;
+    font-size: 40px;
+    transform: translate(0px, -50px);
+}
+
+.eduExEntry {
+    width: 100%;
+    height: fit-content;
+    padding: 0px 0px 30px 0px;
+    border-bottom: 2px solid white;
+}
+
+.eduExEntryType {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 15px;
+}

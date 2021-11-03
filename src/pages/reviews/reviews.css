@@ -1,0 +1,140 @@
+.reviewsContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 150px 30px 100px 30px;
+    box-sizing: border-box;
+}
+
+.reviewNone {
+    color: white;
+    font-size: 40px;
+    margin: 80px 0px 0px 20px;
+    text-align: left;
+    font-weight: 200;
+}
+
+.reviewNoneRemark {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0px 0px 20px;
+    text-align: left;
+    font-weight: 200;
+}
+
+.reviewInvite {
+    color: white;
+    font-size: 20px;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    font-weight: 200;
+}
+
+.reviewInvite span {
+    color: var(--eerie-black);
+    background-color: #FFFFFF80;
+    text-decoration: none;
+    padding: 13px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.reviewInvite span:hover {
+    background-color: var(--heat-wave);
+    color: white;
+    padding: 13px 60px;
+}
+
+.reviewEntryBox {
+    width: 100%;
+    margin: 50px 0px 0px 0px;
+    height: fit-content;
+}
+
+.reviewEntry {
+    width: 90%;
+    height: fit-content;
+    opacity: 0.5;
+    cursor: pointer;
+    overflow: hidden;
+    float: left;
+    padding: 0px 20px 20px 0px;
+    border-radius: 5px;
+}
+
+.reviewEntry:hover {
+    background-color: #FFFFFF20;
+}
+
+.reviewName {
+    color: white;
+    font-size: 20px;
+    margin: 20px 0px 0px 20px;
+}
+
+.reviewDate {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0px 0px 0px 20px;
+}
+
+.reviewContent {
+    color: white;
+    font-size: 20px;
+    margin: 20px 0px 0px 20px;
+    font-weight: 400;
+    white-space: pre-wrap;
+}
+
+.reviewAddButton {
+    float: right;
+}
+
+.reviewAddButton h3 {
+    background-color: var(--orange-peel);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 15px;
+    border-radius: 5px;
+    transform: translate(0px, -5px);
+    margin-right: 20px;
+}
+
+
+@media screen and (min-width: 1125px) {
+    .reviewNone {
+        font-size: 60px;
+        margin: 80px 0px 0px 0px;
+        text-align: center;
+    }
+    .reviewNoneRemark {
+        font-size: 30px;
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+    }
+    .reviewEntryBox {
+        width: 80%;
+        margin: 50px 10% 0px 10%;
+    }
+    .reviewEntry {
+        width: 33.33%;
+    }
+    .reviewName {
+        font-size: 20px;
+        margin: 20px 0px 0px 20px;
+    }
+    .reviewDate {
+        font-size: 20px;
+        margin: 0px 0px 0px 20px;
+    }
+    .reviewContent {
+        font-size: 20px;
+        margin: 20px 0px 0px 20px;
+    }
+    .reviewAddButton h3 {
+        margin-right: 40px;
+    }
+}

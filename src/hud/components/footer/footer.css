@@ -1,0 +1,42 @@
+.footerContainer {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.footerRights {
+    color: white;
+    margin: 25px;
+    padding: 0px;
+    float: left;
+    font-weight: 300;
+    font-size: medium;
+}
+
+.footerIcons {
+    width: 20px;
+    height: 20px;
+    margin: 25px 15px 25px 15px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.footerIcons:hover {
+    transform: scale(1.5,1.5);
+}
+
+
+@media screen and (min-width: 1125px) {
+    .footerContainer {
+        padding-right: 25px;
+    }
+    .footerIcons {
+        margin: 25px 25px 25px 25px;
+    }
+}

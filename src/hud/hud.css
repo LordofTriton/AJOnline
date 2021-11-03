@@ -1,0 +1,23 @@
+.hoverTextContainer {
+    height: fit-content;
+    width: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    transform: translate(-40%, -50%) rotate(-90deg);
+}
+
+.hoverText {
+    color: white;
+    opacity: 0.03;
+    font-size: 70px;
+    font-family: Kosans;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 1125px) {
+    .hoverText {
+        font-size: 80px;
+        opacity: 0.1;
+    }
+}
