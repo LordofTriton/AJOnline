@@ -12,6 +12,7 @@
     opacity: 0.5;
     cursor: pointer;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .projectEntry:hover {

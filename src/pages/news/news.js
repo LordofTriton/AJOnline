@@ -3,19 +3,17 @@ import './news.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 import API from "../../services/api";
 
 const News = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-    const pageControl = CortexControl.setCurrentPage;
     const setBlogPost = CortexControl.setBlogPost;
 
     const [blogPostList] = useState(API.getStore("BlogPosts"))
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.News ? "0px" : "-100vh"}}>
-            <div className="newsContainer" onWheel={(e) => toggle === pages.News ? ScrollControl(e, pageControl, toggle) : null}>
+            <div className="newsContainer">
                 <h1 className="pageContainerTitle">News</h1>
                 {
                     blogPostList.length > 0 ?

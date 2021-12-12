@@ -1,24 +1,15 @@
-import React, {useEffect} from "react";
+import React from "react";
 import './capabilities.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 
 const Capabilities = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-    const pageControl = CortexControl.setCurrentPage;
-
-    let page = document.getElementById("page")
-    useEffect(() => {
-        if (page) {
-            page.focus()
-        }
-    }, [toggle, page])
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Capabilities ? "0px" : "-100vh"}}>
-            <div id="page" className="capabilitiesContainer" onWheel={(e) => toggle === pages.Capabilities ? ScrollControl(e, pageControl, toggle) : null}>
+            <div id="page" className="capabilitiesContainer">
                 {/* <h1 className="pageContainerTitle"><span>My</span> Skills</h1> */}
 
                 <div className="expBox">

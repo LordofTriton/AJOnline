@@ -3,7 +3,6 @@ import './contact.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 import SVGServer from "../../services/svgServer";
 import API from "../../services/api";
 import DateTime from "../../services/dateTime";
@@ -19,7 +18,6 @@ const defaultMessage = {
 
 const Contact = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-    const pageControl = CortexControl.setCurrentPage;
 
     const [messages] = useState(API.getStore("Messages"))
     const [newMessage, setNewMessage] = useState(defaultMessage)
@@ -34,7 +32,7 @@ const Contact = ({CortexControl}) => {
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Contact ? "0px" : "-100vh"}}>
-            <div className="contactContainer" onWheel={(e) => toggle === pages.Contact ? ScrollControl(e, pageControl, toggle) : null}>
+            <div className="contactContainer">
                 <h1 className="pageContainerTitle">Contact Me</h1>
                 
                 <div className="contactInfoBox">

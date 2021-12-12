@@ -3,22 +3,18 @@ import './reviews.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 import API from "../../services/api";
 
 const Reviews = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-    const pageControl = CortexControl.setCurrentPage;
     const reviewControl = CortexControl.setReviewer;
 
     const [reviewList] = useState(API.getStore("Reviews"))
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Reviews ? "0px" : "-100vh"}}>
-            <div className="reviewsContainer" onWheel={(e) => toggle === pages.Reviews ? ScrollControl(e, pageControl, toggle) : null}>
-                <h1 className="pageContainerTitle">Reviews
-                    <span className="reviewAddButton" onClick={() => reviewControl(true)}><h3>Leave A Review</h3></span>
-                </h1>
+            <div className="reviewsContainer">
+                <h1 className="pageContainerTitle">Reviews</h1>
                 <div className="reviewEntryBox">
                     {
                         reviewList.length > 0 && reviewList[0].length > 0 ?
@@ -38,6 +34,8 @@ const Reviews = ({CortexControl}) => {
                         </>
                     }
                 </div>
+                
+                <span className="reviewAddButton" onClick={() => reviewControl(true)}><h3>Leave Your Review</h3></span>
             </div>
         </div>
     )

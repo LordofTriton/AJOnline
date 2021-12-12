@@ -1,9 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import './projects.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 import SVGServer from "../../services/svgServer";
 
 let projectInfo = [
@@ -47,18 +46,10 @@ let projectInfo = [
 
 const Projects = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-    const pageControl = CortexControl.setCurrentPage;
-
-    let page = document.getElementById("page")
-    useEffect(() => {
-        if (page) {
-            page.focus()
-        }
-    }, [toggle, page])
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Projects ? "0px" : "-100vh"}}>
-            <div id="page" className="projectsContainer" onWheel={(e) => toggle === pages.Projects ? ScrollControl(e, pageControl, toggle) : null}>
+            <div id="page" className="projectsContainer">
                 <h1 className="pageContainerTitle"><span>My</span> Projects</h1>
                 {
                     projectInfo.map((project) =>

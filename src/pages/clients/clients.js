@@ -3,7 +3,6 @@ import './clients.css'
 
 //Services
 import { pages } from "../../services/constants";
-import ScrollControl from "../../services/scrollControl";
 
 const Clients = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
@@ -11,7 +10,7 @@ const Clients = ({CortexControl}) => {
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Clients ? "0px" : "-100vh"}}>
-            <div className="clientsContainer" onWheel={(e) => toggle === pages.Clients ? ScrollControl(e, pageControl, toggle) : null}>
+            <div className="clientsContainer">
                 <h1 className="pageContainerTitle"><span>Clients</span> & Partners</h1>
 
                 <h3 className="clientNone">Wow.</h3>

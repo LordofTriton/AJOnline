@@ -167,7 +167,62 @@
       "Title": "Chatbot Mech and AI",
       "Category": "Report",
       "Content": "I've made some upgrades to the Z.E.U.S Project, mainly in the chatbot's ability to learn from dialogue. I also made a few UI fixes regarding responsivity. The major underlying flaw with the bot is it's inability to recognize context in conversation. I intend to research on solutions to this issue ASAP.",
-      "Comments": [],
+      "Comments": [
+        {
+          "id": 1,
+          "UserName": "Josh",
+          "Email": "agboola918@gmail.com",
+          "Content": "No takers?",
+          "Date": "Sunday, December 12, 2021.",
+          "Replies": [
+            {
+              "id": 1,
+              "UserName": "GigaChad",
+              "Email": "agboola918@gmail.com",
+              "Content": "@Josh Hey, can I have some money?",
+              "Date": "Sunday, December 12, 2021."
+            },
+            {
+              "id": 2,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@GigaChad For what?",
+              "Date": "Sunday, December 12, 2021."
+            },
+            {
+              "id": 3,
+              "UserName": "GigaChad",
+              "Email": "agboola918@gmail.com",
+              "Content": "@Josh Rent.",
+              "Date": "Sunday, December 12, 2021."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "UserName": "GigaChad",
+          "Email": "agboola918@gmail.com",
+          "Content": "Do giveaway...",
+          "Date": "Sunday, December 12, 2021.",
+          "Replies": []
+        },
+        {
+          "id": 3,
+          "UserName": "GigaChad",
+          "Email": "agboola918@gmail.com",
+          "Content": "I've made some upgrades to the Z.E.U.S Project, mainly in the chatbot's ability to learn from dialogue. I also made a few UI fixes regarding responsivity. The major underlying flaw with the bot is it's inability to recognize context in conversation. I intend to research on solutions to this issue ASAP.",
+          "Date": "Sunday, December 12, 2021.",
+          "Replies": [
+            {
+              "id": 1,
+              "UserName": "Josh",
+              "Email": "agboola918@gmail.com",
+              "Content": "@GigaChad What's this?",
+              "Date": "Sunday, December 12, 2021."
+            }
+          ]
+        }
+      ],
       "Date": "Saturday, 31 October, 2021"
     }
   ]
