@@ -39,8 +39,8 @@ const Blog = ({CortexControl}) => {
                 id: currentPost._id
             }
 
-            axios.post("http://localhost:5000/portfolio/newPostComment", payload).then(re => {
-                axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
+            axios.post("http://tritonserver.herokuapp.com/portfolio/newPostComment", payload).then(re => {
+                axios.post("http://tritonserver.herokuapp.com/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                     setCurrentPost(re.data)
                 })
             })
@@ -67,8 +67,8 @@ const Blog = ({CortexControl}) => {
                     newComment: newComment
                 }
 
-                axios.post("http://localhost:5000/portfolio/newReplyComment", payload).then(re => {
-                    axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
+                axios.post("http://tritonserver.herokuapp.com/portfolio/newReplyComment", payload).then(re => {
+                    axios.post("http://tritonserver.herokuapp.com/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                         setCurrentPost(re.data)
                     })
                 })
@@ -89,8 +89,8 @@ const Blog = ({CortexControl}) => {
                 newComment: newComment
             }
 
-            axios.post("http://localhost:5000/portfolio/newReplyComment", payload).then(re => {
-                axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
+            axios.post("http://tritonserver.herokuapp.com/portfolio/newReplyComment", payload).then(re => {
+                axios.post("http://tritonserver.herokuapp.com/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                     setCurrentPost(re.data)
                 })
             })

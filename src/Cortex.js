@@ -24,6 +24,7 @@ const Cortex = () => {
     const [navMode, setNavMode] = useState(false)
     const [reviewer, setReviewer] = useState(false)
     const [blogPost, setBlogPost] = useState(null)
+    const BaseAPI = "https://tritonserver.herokuapp.com"
 
     const CortexControl = {
         currentPage,
@@ -33,7 +34,8 @@ const Cortex = () => {
         reviewer,
         setReviewer,
         blogPost,
-        setBlogPost
+        setBlogPost,
+        BaseAPI
     }
 
     return(
