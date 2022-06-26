@@ -11,7 +11,7 @@ const News = ({CortexControl}) => {
     const [blogPostList, setBlogPostList] = useState([])
 
     useEffect(() => {
-        axios.get("https://tritonserver.herokuapp.com/portfolio/getBlogPosts").then(re => {
+        axios.get(`${CortexControl.BaseAPI}/portfolio/getBlogPosts`).then(re => {
             setBlogPostList(re.data)
         })
     }, [CortexControl])

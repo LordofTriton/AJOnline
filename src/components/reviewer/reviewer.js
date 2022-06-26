@@ -24,7 +24,7 @@ const Reviewer = ({CortexControl}) => {
         e.preventDefault()
 
         const userReview = {...newReview, Date: DateTime.getDateFormatOne()}
-        axios.post("https://tritonserver.herokuapp.com/portfolio/addReview", {newReview: userReview})
+        axios.post(`${CortexControl.BaseAPI}/portfolio/addReview`, {newReview: userReview})
         setNewReview(defaultReview)
         control(false)
     }

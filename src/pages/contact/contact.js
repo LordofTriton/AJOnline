@@ -23,7 +23,7 @@ const Contact = ({CortexControl}) => {
         event.preventDefault()
 
         const userMessage = {...newMessage, Date: DateTime.getDateFormatOne()}
-        axios.post("https://tritonserver.herokuapp.com/portfolio/addMessage", {newMessage: userMessage})
+        axios.post(`${CortexControl.BaseAPI}/portfolio/addMessage`, {newMessage: userMessage})
         setNewMessage(defaultMessage)
     }
 

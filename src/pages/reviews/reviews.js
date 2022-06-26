@@ -11,7 +11,7 @@ const Reviews = ({CortexControl}) => {
     const [reviewList, setReviewList] = useState([])
 
     useEffect(() => {
-        axios.get("https://tritonserver.herokuapp.com/portfolio/getReviews").then(re => {
+        axios.get(`${CortexControl.BaseAPI}/portfolio/getReviews`).then(re => {
             setReviewList(re.data)
         })
     }, [CortexControl])
