@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './reviewer.css'
+import axios from "axios";
 
 //Services
-import API from "../../services/api";
 import DateTime from "../../services/dateTime";
 
 const defaultReview = {
@@ -18,14 +18,13 @@ const Reviewer = ({CortexControl}) => {
     const toggle = CortexControl.reviewer;
     const control = CortexControl.setReviewer;
 
-    const [reviews] = useState(API.getStore("Reviews"))
     const [newReview, setNewReview] = useState(defaultReview)
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const userReview = {...newReview, id: reviews[0].length + 1, Date: DateTime.getDateFormatOne()}
-        API.addStoreItem("Reviews", userReview)
+        const userReview = {...newReview, Date: DateTime.getDateFormatOne()}
+        axios.post("http://localhost:5000/portfolio/addReview", {newReview: userReview})
         setNewReview(defaultReview)
         control(false)
     }

@@ -16,7 +16,7 @@ const Clients = ({CortexControl}) => {
                 <h3 className="clientNone">Wow.</h3>
                 <h3 className="clientNoneRemark">This page is looking really <i>empty</i>.</h3>
                 <h3 className="clientNoneRemark">Let's change that.</h3>
-                <h3 className="clientInvite"><span onClick={() => pageControl(pages.Contact)}>Contact Me</span></h3>
+                <h3 className="clientInvite" onClick={() => pageControl(pages.Contact)}>Contact Me</h3>
             </div>
         </div>
     )

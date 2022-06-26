@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    padding: 150px 30px 100px 30px;
+    padding: 150px 30px 100px 10px;
     box-sizing: border-box;
 }
 
@@ -22,10 +22,6 @@
     transition: all 0.5s;
     padding-bottom: 20px;
     overflow: hidden;
-}
-
-.specBox:hover {
-    background-color: #FFFFFF10;
 }
 
 .specBox:hover .specBoxInfo {
@@ -64,5 +60,8 @@
     }
     .specBox {
         width: 33.33%;
+    }
+    .specBox:hover {
+        background-color: #FFFFFF10;
     }
 }

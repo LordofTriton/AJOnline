@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import API from "../../services/api";
 import DateTime from "../../services/dateTime";
 import './blog.css'
 
@@ -27,34 +26,49 @@ const Blog = ({CortexControl}) => {
 
         if (commentDock === "OP") {
             const newComment = {
-                id: currentPost.Comments.length + 1,
-                UserName: commenter,
-                Email: "agboola918@gmail.com",
-                Content: commentContent,
-                Date: DateTime.getDateFormatOne(),
-                Replies: []
+                username: commenter,
+                content: commentContent,
+                date: DateTime.getDateFormatOne(),
+                replies: [],
+                stamp: Date.now()
             }
-            const updatedPost = {...currentPost, Comments: currentPost.Comments.concat(newComment)}
-            axios.put(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`, updatedPost).then(re => {
-                axios.get(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`).then(re => {
+            // const updatedPost = {...currentPost, Comments: currentPost.comments.concat(newComment)}
+
+            const payload = {
+                newComment: newComment,
+                id: currentPost._id
+            }
+
+            axios.post("http://localhost:5000/portfolio/newPostComment", payload).then(re => {
+                axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                     setCurrentPost(re.data)
                 })
             })
+
+            // axios.put(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`, updatedPost).then(re => {
+            //     axios.get(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`).then(re => {
+            //         setCurrentPost(re.data)
+            //     })
+            // })
         }
         else if (typeof(commentDock) === "number") {
-            if (Object.keys(currentPost.Comments[commentDock]).includes("Replies")) {
+            if (Object.keys(currentPost.comments[commentDock]).includes("replies")) {
                 const newComment = {
-                    id: currentPost.Comments[commentDock].Replies.length + 1,
-                    UserName: commenter,
-                    Email: "agboola918@gmail.com",
-                    Content: `@${currentPost.Comments[commentDock].UserName} ${commentContent}`,
-                    Date: DateTime.getDateFormatOne(),
+                    username: commenter,
+                    content: `@${currentPost.comments[commentDock].username} ${commentContent}`,
+                    date: DateTime.getDateFormatOne(),
                 }
-                const updatedPost = currentPost
-                updatedPost.Comments[commentDock].Replies = updatedPost.Comments[commentDock].Replies.concat(newComment)
+                // const updatedPost = currentPost
+                // updatedPost.comments[commentDock].replies = updatedPost.comments[commentDock].replies.concat(newComment)
 
-                axios.put(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`, updatedPost).then(re => {
-                    axios.get(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`).then(re => {
+                const payload = {
+                    id: currentPost._id,
+                    stamp: currentPost.comments[commentDock].stamp,
+                    newComment: newComment
+                }
+
+                axios.post("http://localhost:5000/portfolio/newReplyComment", payload).then(re => {
+                    axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                         setCurrentPost(re.data)
                     })
                 })
@@ -62,17 +76,21 @@ const Blog = ({CortexControl}) => {
         }
         else {
             const newComment = {
-                id: currentPost.Comments[commentDock[0]].Replies.length + 1,
-                UserName: commenter,
-                Email: "agboola918@gmail.com",
-                Content: `@${currentPost.Comments[commentDock[0]].Replies[commentDock[1]].UserName} ${commentContent}`,
-                Date: DateTime.getDateFormatOne(),
+                username: commenter,
+                content: `@${currentPost.comments[commentDock[0]].replies[commentDock[1]].username} ${commentContent}`,
+                date: DateTime.getDateFormatOne(),
             }
-            const updatedPost = currentPost
-            updatedPost.Comments[commentDock[0]].Replies = updatedPost.Comments[commentDock[0]].Replies.concat(newComment)
+            // const updatedPost = currentPost
+            // updatedPost.comments[commentDock[0]].Replies = updatedPost.comments[commentDock[0]].replies.concat(newComment)
 
-            axios.put(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`, updatedPost).then(re => {
-                axios.get(`http://${API.baseAPIUrl}/BlogPosts/${currentPost.id}`).then(re => {
+            const payload = {
+                id: currentPost._id,
+                stamp: currentPost.comments[commentDock[0]].stamp,
+                newComment: newComment
+            }
+
+            axios.post("http://localhost:5000/portfolio/newReplyComment", payload).then(re => {
+                axios.post("http://localhost:5000/portfolio/getBlogPostById", {id: currentPost._id}).then(re => {
                     setCurrentPost(re.data)
                 })
             })
@@ -95,33 +113,33 @@ const Blog = ({CortexControl}) => {
                 {
                     currentPost ?
                         <div style={{width: "100%", overflow: "hidden", padding: "20px", boxSizing: "border-box"}}>
-                            <h3 className="blogPostTitle">{currentPost.Title}</h3>
-                            <h3 className="blogPostInfo">{currentPost.Date}<span>|</span>{currentPost.Category}</h3>
+                            <h3 className="blogPostTitle">{currentPost.title}</h3>
+                            <h3 className="blogPostInfo">{currentPost.date}<span>|</span>{currentPost.category}</h3>
                             <hr />
-                            <pre className="blogPostContent">{currentPost.Content}</pre>
+                            <pre className="blogPostContent">{currentPost.content}</pre>
                             <h3 className="blogCommentBoxTitle">Comments</h3>
                             {
-                                currentPost.Comments.length > 0 ?
-                                currentPost.Comments.map((comment, index) =>
+                                currentPost.comments.length > 0 ?
+                                currentPost.comments.map((comment, index) =>
                                     <div className="blogComment">
-                                        <h3 className="blogCommentName">{comment.UserName}</h3>
-                                        <h3 className="blogCommentDate">{comment.Date}
+                                        <h3 className="blogCommentName">{comment.username}</h3>
+                                        <h3 className="blogCommentDate">{comment.date}
                                             <span onClick={() => replyAction(index)}>Reply</span>
                                         </h3>
-                                        <h3 className="blogCommentContent">{comment.Content}</h3>
+                                        <h3 className="blogCommentContent">{comment.content}</h3>
                                         {
-                                            comment.Replies.map((reply, ind) =>
+                                            comment.replies.map((reply, ind) =>
                                                 <div className="blogCommentReply">
-                                                    <h3 className="blogCommentName">{reply.UserName}</h3>
-                                                    <h3 className="blogCommentDate">{reply.Date}
+                                                    <h3 className="blogCommentName">{reply.username}</h3>
+                                                    <h3 className="blogCommentDate">{reply.date}
                                                         <span onClick={() => replyAction([index, ind])}>Reply</span>
                                                     </h3>
                                                     <h3 className="blogCommentContent">
-                                                        {reply.Content.split(" ")[0].includes("@") ? 
-                                                            <span>{reply.Content.split(" ")[0]}</span> 
+                                                        {reply.content.split(" ")[0].includes("@") ? 
+                                                            <span>{reply.content.split(" ")[0]}</span> 
                                                             : null
                                                         }
-                                                        {reply.Content.split(" ").splice(1, reply.Content.split(" ").length).join(" ")}
+                                                        {reply.content.split(" ").splice(1, reply.content.split(" ").length).join(" ")}
                                                     </h3>
                                                 </div>
                                             )
@@ -142,18 +160,18 @@ const Blog = ({CortexControl}) => {
                 {
                     typeof(commentDock) === "number" ?
                     <div className="blogComment" style={{marginBottom: "25px"}}>
-                        <h3 className="blogCommentName">{currentPost.Comments[commentDock].UserName}</h3>
-                        <h3 className="blogCommentDate">{currentPost.Comments[commentDock].Date}</h3>
-                        <h3 className="blogCommentContent">{currentPost.Comments[commentDock].Content}</h3>
+                        <h3 className="blogCommentName">{currentPost.comments[commentDock].username}</h3>
+                        <h3 className="blogCommentDate">{currentPost.comments[commentDock].date}</h3>
+                        <h3 className="blogCommentContent">{currentPost.comments[commentDock].content}</h3>
                     </div>
                     : null
                 }
                 {
                     commentDock && commentDock !== "OP" && typeof(commentDock) !== "number" ?
                     <div className="blogComment" style={{marginBottom: "25px"}}>
-                        <h3 className="blogCommentName">{currentPost.Comments[commentDock[0]].Replies[commentDock[1]].UserName}</h3>
-                        <h3 className="blogCommentDate">{currentPost.Comments[commentDock[0]].Replies[commentDock[1]].Date}</h3>
-                        <h3 className="blogCommentContent">{currentPost.Comments[commentDock[0]].Replies[commentDock[1]].Content}</h3>
+                        <h3 className="blogCommentName">{currentPost.comments[commentDock[0]].replies[commentDock[1]].useruame}</h3>
+                        <h3 className="blogCommentDate">{currentPost.comments[commentDock[0]].replies[commentDock[1]].date}</h3>
+                        <h3 className="blogCommentContent">{currentPost.comments[commentDock[0]].replies[commentDock[1]].content}</h3>
                     </div>
                     : null
                 }

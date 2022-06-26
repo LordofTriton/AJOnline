@@ -3,7 +3,7 @@
     height: 100%;
     /* background-color: var(--eerie-black); */
     overflow: auto;
-    padding: 160px 30px 100px 30px;
+    padding: 160px 30px 100px 10px;
     box-sizing: border-box;
     perspective: 1000px;
 }
@@ -41,14 +41,16 @@
     bottom: 90px;
 }
 
-.introImage {
-    height: 100vh;
-    width: 450px;
+.profilePic {
+    height: 400px;
+    width: 300px;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 100px;
+    right: 150px;
     margin-right: 150px;
     border-radius: 10px;
+    background-image: url("../../assets/images/Snapchat-512720091.jpg");
+    background-size: 100% 100%;
 }
 
 .resumeButton {
@@ -60,6 +62,7 @@
     cursor: pointer;
     transition: all 0.5s;
     overflow: hidden;
+    transform: translate(-30px, 0px);
 }
 
 .resumeButton hr {

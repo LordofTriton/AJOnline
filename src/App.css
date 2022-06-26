@@ -74,7 +74,7 @@
 .pageContainer {
   width: 100%;
   height: 100%;
-  background-image: url(assets/images/bckg5.jpg);
+  background-image: url(assets/images/alexander-nedviga-40-black-wood-background-textures-23.jpg);
   background-size: cover;
   overflow: hidden;
   position: fixed;
@@ -110,6 +110,6 @@
     background-position: unset;
   }
   .pageContainerTitle {
-    margin-left: 40px;
+    margin-left: 60px;
   }
 }

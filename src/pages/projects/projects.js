@@ -16,13 +16,13 @@ let projectInfo = [
         URL: ""
     },
     {
-        Name: "Z.E.U.S",
+        Name: "Xalen",
         Spec: {
             Desc: "Chatbot",
             Components: "HTML, CSS, ReactJS",
-            Git: "https://github.com/LordofTriton/Zenith-Emergent-Uplifting-System-Z.E.U.S-.git"
+            Git: "https://github.com/LordofTriton/Xalen.git"
         },
-        URL: "https://zeus-chat.herokuapp.com"
+        URL: "https://xalen.netlify.app"
     },
     {
         Name: "SVMS",

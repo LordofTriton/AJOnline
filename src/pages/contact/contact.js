@@ -4,11 +4,10 @@ import './contact.css'
 //Services
 import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
-import API from "../../services/api";
 import DateTime from "../../services/dateTime";
+import axios from "axios";
 
 const defaultMessage = {
-    id: 0,
     Name: "",
     Email: "",
     Subject: "",
@@ -18,15 +17,13 @@ const defaultMessage = {
 
 const Contact = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
-
-    const [messages] = useState(API.getStore("Messages"))
     const [newMessage, setNewMessage] = useState(defaultMessage)
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        const userMessage = {...newMessage, id: messages.length + 1, Date: DateTime.getDateFormatOne()}
-        API.addStoreItem("Messages", userMessage)
+        const userMessage = {...newMessage, Date: DateTime.getDateFormatOne()}
+        axios.post("http://localhost:5000/portfolio/addMessage", {newMessage: userMessage})
         setNewMessage(defaultMessage)
     }
 
@@ -50,13 +47,13 @@ const Contact = ({CortexControl}) => {
                 </div>
                 <div className="messageBox">
                     <form onSubmit={handleSubmit}>
-                        <input className="messageBoxField" placeholder="Name" type="text" style={{width: "47.5%", marginRight: "5%"}} value={newMessage.Name} onChange={(e) => setNewMessage({...newMessage, Name: e.target.value})} />
+                        <input className="messageBoxField" placeholder="Name" type="text" style={{width: "45.5%", marginRight: "5%"}} value={newMessage.Name} onChange={(e) => setNewMessage({...newMessage, Name: e.target.value})} />
 
-                        <input className="messageBoxField" placeholder="Email" type="email" style={{width: "47.5%"}} value={newMessage.Email} onChange={(e) => setNewMessage({...newMessage, Email: e.target.value})} />
+                        <input className="messageBoxField" placeholder="Email" type="email" style={{width: "45.5%"}} value={newMessage.Email} onChange={(e) => setNewMessage({...newMessage, Email: e.target.value})} />
 
-                        <input className="messageBoxField" placeholder="Subject (Optional)" type="text" style={{width: "100%"}} value={newMessage.Subject} onChange={(e) => setNewMessage({...newMessage, Subject: e.target.value})} />
+                        <input className="messageBoxField" placeholder="Subject (Optional)" type="text" style={{width: "96%"}} value={newMessage.Subject} onChange={(e) => setNewMessage({...newMessage, Subject: e.target.value})} />
 
-                        <textarea className="messageBoxField" placeholder="Message" type="text" style={{width: "100%", paddingTop: "15px", height: "200px"}} value={newMessage.Content} onChange={(e) => setNewMessage({...newMessage, Content: e.target.value})} />
+                        <textarea className="messageBoxField" placeholder="Message" type="text" style={{width: "96%", paddingTop: "15px", height: "200px"}} value={newMessage.Content} onChange={(e) => setNewMessage({...newMessage, Content: e.target.value})} />
 
                         <input className="messageBoxSubmit" type="submit" value="Contact Me" />
                     </form>

@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './news.css'
+import axios from "axios";
 
 //Services
 import { pages } from "../../services/constants";
-import API from "../../services/api";
 
 const News = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
     const setBlogPost = CortexControl.setBlogPost;
+    const [blogPostList, setBlogPostList] = useState([])
 
-    const [blogPostList] = useState(API.getStore("BlogPosts"))
+    useEffect(() => {
+        axios.get("http://localhost:5000/portfolio/getBlogPosts").then(re => {
+            setBlogPostList(re.data)
+        })
+    }, [CortexControl])
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.News ? "0px" : "-100vh"}}>
@@ -17,11 +22,11 @@ const News = ({CortexControl}) => {
                 <h1 className="pageContainerTitle">News</h1>
                 {
                     blogPostList.length > 0 ?
-                    blogPostList[0].map((post) => 
+                    blogPostList.map((post) => 
                         <>
                             <div className="blogEntry" onClick={() => setBlogPost(post)}>
-                                <h3 className="blogEntryTitle">{post.Title}</h3>
-                                <h3 className="blogEntryInfo">{post.Date}<span>|</span>{post.Category}</h3>
+                                <h3 className="blogEntryTitle">{post.title}</h3>
+                                <h3 className="blogEntryInfo">{post.date}<span>|</span>{post.category}</h3>
                             </div>
                         </>
                     ) : null
