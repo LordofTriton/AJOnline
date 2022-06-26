@@ -51,6 +51,8 @@ const Projects = ({CortexControl}) => {
         <div className="pageContainer" style={{top: toggle <= pages.Projects ? "0px" : "-100vh"}}>
             <div id="page" className="projectsContainer">
                 <h1 className="pageContainerTitle"><span>My</span> Projects</h1>
+                <br />
+                <br />
                 {
                     projectInfo.map((project) =>
                         <div className="projectEntry">
