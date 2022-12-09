@@ -31,7 +31,7 @@ let projectInfo = [
             Components: "HTML, CSS, ReactJS",
             Git: ""
         },
-        URL: "svms.netlify.app"
+        URL: "https://svms.netlify.app"
     },
     {
         Name: "SnoeFlag",
@@ -40,7 +40,7 @@ let projectInfo = [
             Components: "HTML, CSS, ReactJS",
             Git: "https://github.com/LordofTriton/SnoeFlag.git"
         },
-        URL: "snoeflag.netlify.app"
+        URL: "https://snoeflag.netlify.app"
     },
     {
         Name: "PACEPS",
@@ -49,7 +49,7 @@ let projectInfo = [
             Components: "HTML, CSS, JavaScript",
             Git: ""
         },
-        URL: "pacepsonline.netlify.app"
+        URL: "https://pacepsonline.netlify.app"
     },
     {
         Name: "Blockstacle",
