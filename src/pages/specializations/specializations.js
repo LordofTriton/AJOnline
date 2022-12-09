@@ -21,7 +21,7 @@ const Specializations = ({CortexControl}) => {
                             <SVGServer.Web color="var(--heat-wave)" width="100%" height="100%" />
                         </div>
                         <h3 className="specBoxTitle">Websites and Webpages</h3>
-                        <h3 className="specBoxInfo">Working with client and community, we deliver masterplans that create vibrant new places and spaces, attract people, and encourage investment through.</h3>
+                        <h3 className="specBoxInfo">I can provide high quality, visually stunning, and optimised websites and webpages to suit your needs, whatever they may be. </h3>
                         <hr style={{width: "70%", marginLeft: "20px"}} />
                     </div>
                     <div className="specBox">
@@ -29,7 +29,7 @@ const Specializations = ({CortexControl}) => {
                             <SVGServer.WebApp color="var(--heat-wave)" width="100%" height="100%" />
                         </div>
                         <h3 className="specBoxTitle">Web Applications</h3>
-                        <h3 className="specBoxInfo">Working with client and community, we deliver masterplans that create vibrant new places and spaces, attract people, and encourage investment through.</h3>
+                        <h3 className="specBoxInfo">I can build full scale web applications, e-commerce websites, and more, using ReactJS, NextJS, and MongoDB. I deliver excellent products in a short amount of time.</h3>
                         <hr style={{width: "70%", marginLeft: "20px"}} />
                     </div>
                     <div className="specBox">
@@ -37,7 +37,7 @@ const Specializations = ({CortexControl}) => {
                             <SVGServer.Brush color="var(--heat-wave)" width="100%" height="100%" />
                         </div>
                         <h3 className="specBoxTitle">Design</h3>
-                        <h3 className="specBoxInfo">Working with client and community, we deliver masterplans that create vibrant new places and spaces, attract people, and encourage investment through.</h3>
+                        <h3 className="specBoxInfo">I'm fairly proficient in designing application using popular design tools such as Figma and Adobe XD. I'm a very creative designer with an eye for detail.</h3>
                         <hr style={{width: "70%", marginLeft: "20px"}} />
                     </div>
                 </div>

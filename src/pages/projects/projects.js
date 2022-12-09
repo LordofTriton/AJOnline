@@ -11,7 +11,7 @@ let projectInfo = [
         Spec: {
             Desc: "Online CV/Resume",
             Components: "HTML, CSS, ReactJS",
-            Git: ""
+            Git: "https://github.com/LordofTriton/AJOnline.git"
         },
         URL: ""
     },
@@ -27,11 +27,29 @@ let projectInfo = [
     {
         Name: "SVMS",
         Spec: {
-            Desc: "Visitor Management",
+            Desc: "Visitor Management System",
             Components: "HTML, CSS, ReactJS",
             Git: ""
         },
-        URL: ""
+        URL: "svms.netlify.app"
+    },
+    {
+        Name: "SnoeFlag",
+        Spec: {
+            Desc: "Musical Artiste",
+            Components: "HTML, CSS, ReactJS",
+            Git: "https://github.com/LordofTriton/SnoeFlag.git"
+        },
+        URL: "snoeflag.netlify.app"
+    },
+    {
+        Name: "PACEPS",
+        Spec: {
+            Desc: "Landing Page",
+            Components: "HTML, CSS, JavaScript",
+            Git: ""
+        },
+        URL: "pacepsonline.netlify.app"
     },
     {
         Name: "Blockstacle",
@@ -40,7 +58,7 @@ let projectInfo = [
             Components: "HTML, CSS, JavaScript",
             Git: "https://github.com/LordofTriton/Blockstacle.git"
         },
-        URL: "https://blockstacle.herokuapp.com"
+        URL: "https://blockstacle.netlify.app"
     }
 ]
 
