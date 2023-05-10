@@ -13,7 +13,7 @@ const Capabilities = ({CortexControl}) => {
                 {/* <h1 className="pageContainerTitle"><span>My</span> Skills</h1> */}
 
                 <div className="expBox">
-                    <h3 className="expNum">4</h3>
+                    <h3 className="expNum">6</h3>
                     <h3 className="expText">Years Coding Experience</h3>
                     <hr style={{width: "50%", margin: "0px 25% 0px 25%", transform: "translate(0px, 20px)"}} />
                 </div>
@@ -32,6 +32,10 @@ const Capabilities = ({CortexControl}) => {
                     <h3 className="proBoxInfo">JavaScript (ES6)<span>90%</span></h3>
                     <div className="proBoxBar">
                         <div className="proBoxProgress" style={{width: "90%"}}></div>
+                    </div>
+                    <h3 className="proBoxInfo">TypeScript<span>90%</span></h3>
+                    <div className="proBoxBar">
+                        <div className="proBoxProgress" style={{width: "70%"}}></div>
                     </div>
 
                     <hr style={{width: "50%", margin: "50px 25% 30px 25%"}} />

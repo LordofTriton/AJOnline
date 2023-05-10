@@ -25,15 +25,6 @@ let projectInfo = [
         URL: "https://xalen.netlify.app"
     },
     {
-        Name: "SVMS",
-        Spec: {
-            Desc: "Visitor Management System",
-            Components: "HTML, CSS, ReactJS",
-            Git: ""
-        },
-        URL: "https://svms.netlify.app"
-    },
-    {
         Name: "SnoeFlag",
         Spec: {
             Desc: "Musical Artiste",
@@ -52,13 +43,22 @@ let projectInfo = [
         URL: "https://pacepsonline.netlify.app"
     },
     {
-        Name: "Blockstacle",
+        Name: "Butterfingers",
         Spec: {
-            Desc: "Browser Game",
+            Desc: "Bakery Website",
             Components: "HTML, CSS, JavaScript",
-            Git: "https://github.com/LordofTriton/Blockstacle.git"
+            Git: ""
         },
-        URL: "https://blockstacle.netlify.app"
+        URL: "https://butterfingers.netlify.app"
+    },
+    {
+        Name: "Currency Converter",
+        Spec: {
+            Desc: "Currency Converter",
+            Components: "HTML, CSS, JavaScript",
+            Git: ""
+        },
+        URL: "https://grcurrencyconverter.netlify.app"
     }
 ]
 
