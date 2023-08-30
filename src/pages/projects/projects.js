@@ -59,6 +59,15 @@ let projectInfo = [
             Git: ""
         },
         URL: "https://grcurrencyconverter.netlify.app"
+    },
+    {
+        Name: "Echo Social",
+        Spec: {
+            Desc: "Basic social media platform.",
+            Components: "NextJS, SOcket.IO",
+            Git: "https://www.github.com/LordofTriton/EchoSocial"
+        },
+        URL: "https://echosocial.netlify.app"
     }
 ]
 
