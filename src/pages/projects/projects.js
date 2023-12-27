@@ -67,7 +67,7 @@ let projectInfo = [
             Components: "NextJS, SOcket.IO",
             Git: "https://www.github.com/LordofTriton/EchoSocial"
         },
-        URL: "https://echosocial.netlify.app"
+        URL: "https://echo-social.vercel.app"
     }
 ]
 
