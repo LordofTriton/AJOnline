@@ -16,6 +16,15 @@ let projectInfo = [
         URL: ""
     },
     {
+        Name: "Uri Creative",
+        Spec: {
+            Desc: "Talent Showcase Platform",
+            Components: "NextJS, Node.js, Typescript",
+            Git: ""
+        },
+        URL: "https://uricreative.com"
+    },
+    {
         Name: "Xalen",
         Spec: {
             Desc: "Chatbot",
