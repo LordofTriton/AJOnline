@@ -4,7 +4,8 @@ import './intro.css'
 //Services
 import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
-import Resume from "../../assets/AJResume.pdf"
+
+import Resume from "../../assets/NewResume.pdf"
 
 const Intro = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
