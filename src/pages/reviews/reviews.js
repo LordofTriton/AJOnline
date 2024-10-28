@@ -4,9 +4,14 @@ import axios from "axios";
 
 //Services
 import { pages } from "../../services/constants";
+import { useScroll } from "../../hooks/useScroll";
 
 const Reviews = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
+
     const reviewControl = CortexControl.setReviewer;
     const [reviewList, setReviewList] = useState([])
 
@@ -18,7 +23,7 @@ const Reviews = ({CortexControl}) => {
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Reviews ? "0px" : "-100vh"}}>
-            <div className="reviewsContainer">
+            <div className="reviewsContainer" ref={scrollRef}>
                 <h1 className="pageContainerTitle">Reviews</h1>
                 <div className="reviewEntryBox">
                     {

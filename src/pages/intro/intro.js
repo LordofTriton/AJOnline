@@ -6,13 +6,17 @@ import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
 
 import Resume from "../../assets/NewResume.pdf"
+import { useScroll } from "../../hooks/useScroll";
 
-const Intro = ({CortexControl}) => {
+const Intro = ({ CortexControl }) => {
     const toggle = CortexControl.currentPage;
-    
-    return(
-        <div className="pageContainer" style={{top: toggle <= pages.Intro ? "0px" : "-100vh"}}>
-            <div id="page" className="introContainer">
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
+
+    return (
+        <div className="pageContainer" style={{ top: toggle <= pages.Intro ? "0px" : "-100vh" }}>
+            <div id="page" className="introContainer" ref={scrollRef}>
 
                 <h3 className="introMessage"><span>Howdy</span>, I'm Josh.</h3>
 

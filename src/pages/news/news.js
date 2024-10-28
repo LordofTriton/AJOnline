@@ -4,9 +4,14 @@ import axios from "axios";
 
 //Services
 import { pages } from "../../services/constants";
+import { useScroll } from "../../hooks/useScroll";
 
 const News = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
+
     const setBlogPost = CortexControl.setBlogPost;
     const [blogPostList, setBlogPostList] = useState([])
 
@@ -18,7 +23,7 @@ const News = ({CortexControl}) => {
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.News ? "0px" : "-100vh"}}>
-            <div className="newsContainer">
+            <div className="newsContainer" ref={scrollRef}>
                 <h1 className="pageContainerTitle">News</h1>
                 {
                     blogPostList.length > 0 ?

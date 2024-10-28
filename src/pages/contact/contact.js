@@ -6,6 +6,7 @@ import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
 import DateTime from "../../services/dateTime";
 import axios from "axios";
+import { useScroll } from "../../hooks/useScroll";
 
 const defaultMessage = {
     Name: "",
@@ -17,6 +18,10 @@ const defaultMessage = {
 
 const Contact = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
+
     const [newMessage, setNewMessage] = useState(defaultMessage)
 
     const handleSubmit = (event) => {
@@ -29,7 +34,7 @@ const Contact = ({CortexControl}) => {
 
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Contact ? "0px" : "-100vh"}}>
-            <div className="contactContainer">
+            <div className="contactContainer" ref={scrollRef}>
                 <h1 className="pageContainerTitle">Contact Me</h1>
                 
                 <div className="contactInfoBox">

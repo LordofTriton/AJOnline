@@ -3,13 +3,17 @@ import './capabilities.css'
 
 //Services
 import { pages } from "../../services/constants";
+import { useScroll } from "../../hooks/useScroll";
 
 const Capabilities = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Capabilities ? "0px" : "-100vh"}}>
-            <div id="page" className="capabilitiesContainer">
+            <div id="page" className="capabilitiesContainer" ref={scrollRef}>
                 {/* <h1 className="pageContainerTitle"><span>My</span> Skills</h1> */}
 
                 <div className="expBox">

@@ -7,13 +7,17 @@ import HUD from "../../hud/hud";
 //Services
 import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
+import { useScroll } from "../../hooks/useScroll";
 
 const Specializations = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Specializations ? "0px" : "-100vh"}}>
-            <div id="page" className="specContainer">
+            <div id="page" className="specContainer" ref={scrollRef}>
                 <h1 className="pageContainerTitle"><span>My</span> Specializations</h1>
                 <div className="specBoxContainer">
                     <div className="specBox">

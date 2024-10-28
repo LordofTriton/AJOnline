@@ -4,6 +4,7 @@ import './projects.css'
 //Services
 import { pages } from "../../services/constants";
 import SVGServer from "../../services/svgServer";
+import { useScroll } from "../../hooks/useScroll";
 
 let projectInfo = [
     {
@@ -82,10 +83,13 @@ let projectInfo = [
 
 const Projects = ({CortexControl}) => {
     const toggle = CortexControl.currentPage;
+    const pageControl = CortexControl.setCurrentPage;
+
+    const { scrollRef } = useScroll(toggle, pageControl);
     
     return(
         <div className="pageContainer" style={{top: toggle <= pages.Projects ? "0px" : "-100vh"}}>
-            <div id="page" className="projectsContainer">
+            <div id="page" className="projectsContainer" ref={scrollRef}>
                 <h1 className="pageContainerTitle"><span>My</span> Projects</h1>
                 <br />
                 <br />
